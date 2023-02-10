@@ -1,9 +1,19 @@
 class Divisible
     def divide
-        range=("n1".."n9").to_a
+        n1=gets.chomp.to_i
+        n2=gets.chomp
+        n3=gets.chomp
+
+        range=(n1..n2).to_a
+     
+        puts 'count is'
+        puts range.count()
         puts "#{range}"
-        a=(range)
-        puts a
+
+        x=(range)/(n3)
+        puts x
+
+     
     end
 end
 
