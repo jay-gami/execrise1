@@ -1,10 +1,10 @@
 class Boolean
     def evenodd
-        a=3
+        a=gets.chomp.to_i
         if (a%2==0)
-            puts "Its Even Number : #{true}"
+            puts "#{false}"
         else
-            puts "Its Odd Number : #{false}"
+            puts "#{true}"
         end
     end
     end
