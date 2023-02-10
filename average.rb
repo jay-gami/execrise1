@@ -1,14 +1,17 @@
+#write a program to compute the average of three numbers
 
 class Avg
-puts 'Enter a'
-a=gets.chomp.to_i
-puts 'Enter b'
-b=gets.chomp.to_i
-puts 'Enter c'
-c=gets.chomp.to_i
+def average
+    puts "Enter value of a"
+    a=gets.chomp.to_i
+    puts "Enter value of b"
+    b=gets.chomp.to_i
+    puts "Enter value of c"
+    c=gets.chomp.to_i
 
-puts 'total of three numbers'
-d=(a+b+c)/3
-puts d
+    d=(a+b+c)/3
+    puts "average of three number is : #{d}"
 end
-
+end
+obj=Avg.new()
+obj.average
