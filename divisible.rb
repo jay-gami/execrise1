@@ -1,19 +1,20 @@
 class Divisible
     def divide
-        n1=gets.chomp.to_i
-        n2=gets.chomp
-        n3=gets.chomp
+        n1,n2,n3=gets.chomp.split.map(&:to_i)
+        range=(n1..n2)
+        count=0
 
-        range=(n1..n2).to_a
-     
-        puts 'count is'
-        puts range.count()
-        puts "#{range}"
 
-        x=(range)/(n3)
-        puts x
+        print "Numbers: "
 
-     
+        (range).each do |i|
+            if i%n3==0
+                print "#{i}, "
+                count = count+1
+            end
+        end
+
+        puts "& Counts:#{count}"     
     end
 end
 
