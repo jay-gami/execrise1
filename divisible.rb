@@ -9,12 +9,8 @@ class Divisible
                 print  "#{i} "
              count =count+1
             end         
-        end
-    
+        end  
         puts "& Count: #{count}"
-
-
-
     end
 end
 
