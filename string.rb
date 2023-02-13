@@ -1,12 +1,12 @@
-class String
-    
-    def str
-        my_str="Hello Guys Myself Jay"
-        a=my_str.index("M")
-        b=my_str.index("H")
-        c=my_str.index("J")
+#write a program to get te character at given index value within the string
 
-        puts "#{my_str}"
+class String   
+    def str
+        my_str= "Hello Myself jay i am 23 years old"
+        a=my_str[2]
+        b=my_str[6]
+        c=my_str[9]
+
         puts "index value of character M is : #{a}"
         puts "index value of character H is : #{b}"
         puts "index value of character J is : #{c}"

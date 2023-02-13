@@ -1,7 +1,7 @@
 class Duplicate
 def arr_duplicate  
-    array=["jay","abhi","vijay"]
-    array1=["jay","abhi","vijay","ramesh","mukesh"]
+    array=[1,2,3,4,5,6,7,8]
+    array1=[3,4,8]
 
     arr= array & array1
     puts "#{arr}"
