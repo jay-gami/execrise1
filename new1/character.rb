@@ -1,5 +1,6 @@
+
+
 class Character
-    
     def count
         string=gets.chomp
     
@@ -10,8 +11,7 @@ class Character
 
 
 
-end
-    
+    end
 end
 
 
