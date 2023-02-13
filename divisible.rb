@@ -1,3 +1,4 @@
+#Find How many numbers between n1 and n2(both inclusive) are divisible by n3
 class Divisible
     def divide
         n1,n2,n3=gets.chomp.split(' ').map(&:to_i)
@@ -5,7 +6,7 @@ class Divisible
         count=0
         print "Numbers: "
         (range).each do |i| 
-            if i%n3==0
+            if (i%n3==0)
                 print  "#{i} "
              count =count+1
             end         
@@ -13,6 +14,7 @@ class Divisible
         puts "& Count: #{count}"
     end
 end
+
 
 obj=Divisible.new()
 obj.divide
