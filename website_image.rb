@@ -8,7 +8,7 @@ class Website
      @i=0   
       while @i<@y do
         @w,@h=gets.chomp.split(' ').map(&:to_i)
-        @i +=1  
+        @i =@i+1  
       end
 
 
@@ -18,7 +18,10 @@ class Website
         puts "perfect"
      else(@w!=@h)
         puts "crop and accept"
+     
+
      end 
+    
 
     end
     
