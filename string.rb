@@ -1,7 +1,7 @@
 #write a program to get te character at given index value within the string
 
 class String   
-    def str
+    def process
         my_str= "Hello Myself jay i am 23 years old"
         a=my_str[2]
         b=my_str[6]
@@ -15,4 +15,4 @@ class String
 end
 
 obj=String.new()
-obj.str
+obj.process

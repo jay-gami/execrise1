@@ -4,17 +4,17 @@ adding,subtracting,multiplying and dividing among the two values
 =end
 
 class Arithmetic
-    def operator
+    def initialize
         puts "Enter first value"
-        a=gets.chomp.to_i
+        @a=gets.chomp.to_i
         puts "Enter second value"
-        b=gets.chomp.to_i
-
-
-        oper_add=a+b
-        oper_sub=a-b
-        oper_mul=a*b
-        oper_div=a/b
+        @b=gets.chomp.to_i
+    end
+    def process
+        oper_add=@a+@b
+        oper_sub=@a-@b
+        oper_mul=@a*@b
+        oper_div=@a/@b
 
         puts "addition of two number is : #{oper_add}"
         puts "subtraction of two number is : #{oper_sub}"
@@ -24,5 +24,5 @@ class Arithmetic
 end
 
 obj=Arithmetic.new()
-obj.operator
+obj.process
 
