@@ -6,10 +6,10 @@ class Website
 
     def process
      @i=0   
-     while @i<@y do
-        @h,@w=gets.chomp.split(' ').map(&:to_i)
-        @i +=1
-     end
+      while @i<@y do
+        @w,@h=gets.chomp.split(' ').map(&:to_i)
+        @i +=1  
+      end
 
 
      if(@x<@h)
@@ -19,10 +19,9 @@ class Website
      else(@w!=@h)
         puts "crop and accept"
      end 
-    
 
     end
-
+    
 
 
 end
