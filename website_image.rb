@@ -13,7 +13,7 @@ class Website
 
 
      if(@x<@h)
-        puts "not valid"
+        puts "not valid" 
      elsif(@w==@h)
         puts "perfect"
      else(@w!=@h)
@@ -21,7 +21,7 @@ class Website
      
 
      end 
-    
+   
 
     end
     
