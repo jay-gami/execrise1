@@ -11,17 +11,19 @@ class Website
         @i =@i+1  
       end
 
-
      if(@x<@h)
         puts "not valid" 
+        continue
      elsif(@w==@h)
         puts "perfect"
+        continue
      else(@w!=@h)
         puts "crop and accept"
      
 
      end 
    
+    
 
     end
     
