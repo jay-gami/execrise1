@@ -1,32 +1,37 @@
 class Website
     def initialize
-        @x=gets.chomp.to_i
-        @y=gets.chomp.to_i 
+      @l=gets.chomp.to_i
+      @y=gets.chomp.to_i 
     end
 
     def process
+      @arr=[]
+
      @i=0   
-      while @i<@y do
+      while (@i<@y) do
+
         @w,@h=gets.chomp.split(' ').map(&:to_i)
         @i =@i+1  
-      end
+        @arr.push(@w,@h)
+      @j=0
+      while (@j<@y) do
 
-     if(@x<@h)
-        puts "not valid" 
-        continue
-     elsif(@w==@h)
-        puts "perfect"
-        continue
-     else(@w!=@h)
-        puts "crop and accept"
-     
 
-     end 
-   
-    
+         if(@w<@l || @h<@l)
+            if
+            puts "not valid"
+            
+            end
+         elsif(@w==@h)
+         puts "Accepted"
+         
+         else(@w!=@h)
+         puts "Crop and Accept"
+        
+         end
+   end
+end
 
-    end
-    
 
 
 end
