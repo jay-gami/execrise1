@@ -29,11 +29,31 @@ class Shop
     end
 
     def process
-   
-        @order=[]
+   @a=0
+   @q=0
+   while(@a<4)do
 
-        @order=gets.chomp.to_i
-        puts @order
+    @a=@a+1
+    @a=gets.chomp.to_i
+
+    if(@a==1)
+
+        puts "create new order"
+        
+
+    elsif(@a==2)
+
+        puts "Print Day Details"
+
+    elsif(@a==3)
+
+        puts "Print Month details"
+        3
+    else(@a==@q)
+
+        puts "exit"
+    break  
+    end
        
         end
     
