@@ -30,6 +30,7 @@ class Shop
         puts "3 Print Month Details "
         puts "How may I help you?(1,2,3 or quit)"
     end
+
     def process   
           
         loop  do 
@@ -57,6 +58,7 @@ class Shop
         $maximum=$arr1.max
         $minimum=$arr1.min
         $avg=$arr1.sum/$arr1.size
+        
 
 
 
