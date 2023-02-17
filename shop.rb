@@ -42,23 +42,20 @@ class Shop
         puts "create new order"
        
         $amt=gets.chomp.to_i
-
          if ($amt==0)
           $total_order=$total_order-1
           puts "1 Create New Order  "
           puts "2 Print Day Details "
           puts "3 Print Month Details "
           puts "How may I help you?(1,2,3 or quit)"
-          next
-         
-        
+          next  
          end
         $arr1.push($amt)
         $total= $arr1.sum
         $maximum=$arr1.max
         $minimum=$arr1.min
         $avg=$arr1.sum/$arr1.size
-        
+
 
 
 
