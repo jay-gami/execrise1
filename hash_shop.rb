@@ -61,6 +61,7 @@ class Shop
               $minimum=@arr2.map{|v| v[:value]}.min
               $maximum=@arr2.map{|v| v[:value]}.max
               $avg=$total_amt/@arr2.size   
+              
             end
           end
 
