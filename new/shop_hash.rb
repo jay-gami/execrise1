@@ -28,45 +28,33 @@ class Shop
           
     end
 
-    def process   
-        loop  do 
-          initialize
-
-        @a=gets.chomp.to_i
-      if(@a==1)  
-        puts "create new order "        
-
-        @input=gets.chomp.split(" ")
-
-        @date=@input[0]
-        $amt=@input[1].to_i 
-        $total_order=$total_order+1
-
+  def process   
+    loop  do 
+    initialize
+    @a=gets.chomp.to_i
+    if(@a==1)  
+      puts "create new order "        
+      @input=gets.chomp.split(" ")
+      @date=@input[0]
+      $amt=@input[1].to_i 
+      $total_order=$total_order+1
         # if($amt==0)
         #   $total_order=$total_order-1
-        # end
-        $arr1.push(Hash["date":@date,"value":$amt])
-        $total=$arr1.reduce(0){|k,v|k+v[:value]}
-        $minimum=$arr1.map{|v| v[:value]}.min
-        $maximum=$arr1.map{|v| v[:value]}.max
-        $avg=$total/$arr1.size
-
-        puts "#{$arr1}"
-        elsif(@a==2)
-
-          @arr2=[]
-
-        
-                puts "Print Day Details"
-                @input=gets.chomp.split(" ")
-            
-                @date=@input[0]
-            
-                for j in $arr1
-                if (:@date==j[0])
-                @arr2.push(Hash["date":j.values[0],"value":j.values[1]])
-
-          
+       # end
+      $arr1.push(Hash["date":@date,"value":$amt])
+      $total=$arr1.reduce(0){|k,v|k+v[:value]}
+      $minimum=$arr1.map{|v| v[:value]}.min
+      $maximum=$arr1.map{|v| v[:value]}.max
+      $avg=$total/$arr1.size
+      puts "#{$arr1}"
+    elsif(@a==2)
+      @arr2=[]     
+      puts "Print Day Details"
+      @input=gets.chomp.split(" ")          
+      @date=@input[0]     
+        for j in $arr1
+          if (@input==j.values[0])
+            @arr2.push(Hash["date":j.values[0],"value":j.values[1]])        
 
             end
 

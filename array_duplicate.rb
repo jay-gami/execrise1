@@ -12,7 +12,8 @@ class Duplicate
         @array1.each do |j|
             if i==j
                 @array2.push(i)
-            end
+           
+              end
         end
     end
      puts "#{@array2}"
