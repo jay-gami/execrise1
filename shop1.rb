@@ -5,7 +5,7 @@ $total_amt=0
 $maximum=0
 $minimum=0
 $avg=0
-$amt=0
+$amt
 $arr1=[]
 
 
@@ -39,10 +39,8 @@ class Shop
         @input=gets.chomp.split(" ")
         @date=Date.parse(@input[0]).strftime("%d-%m-%Y")
         $amt=@input[1].to_i 
-        
+        $arr1.push(Hash["date":@date,"value":$amt])
         if($amt>0)
-          $arr1.push(Hash["date":@date,"value":$amt])
-
           # $total_order=$total_order+1
 
         $total_order=$arr1.size
@@ -58,7 +56,7 @@ class Shop
         @input=gets.chomp
         @date=Date.parse(@input).strftime("%d-%m-%Y")
           for j in $arr1  
-            if (@input==j.values[0])
+            if @input==j.values[0]
               @arr2.push(Hash["date":j.values[0],"value":j.values[1]])
               $total_order=@arr2.size
               $total_amt=@arr2.map{|v|v[:value]}.sum
@@ -66,16 +64,14 @@ class Shop
               $maximum=@arr2.map{|v| v[:value]}.max
               $avg=$total_amt/@arr2.size  
             else
-                $total_order=@arr2.size
               $total_amt=@arr2.map{|v|v[:value]}.sum
               $minimum=@arr2.map{|v| v[:value]}.min
               # puts "#{@minimum}"
               $maximum=@arr2.map{|v| v[:value]}.max
-              $avg=$total_amt % @arr2.size  
-          end
-          end    
-          puts "#{@arr2}"
-     
+              $avg=$total_amt/@arr2.size
+            end
+            puts "#{j}"
+          end         
       elsif(@num==3)
         @arr3=[]
         puts "Print Month details"
