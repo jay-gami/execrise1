@@ -14,7 +14,7 @@ class Shop
     puts "==============="
     puts "Welcome to shop"
   end
-  
+
   def process  
     loop  do 
       puts "==============="
@@ -44,7 +44,7 @@ class Shop
         $total_amt=$arr1.map{|v|v[:value]}.sum
         $minimum=$arr1.map{|v| v[:value]}.min
         $maximum=$arr1.map{|v| v[:value]}.max
-        $avg=$total_amt/$total_order
+        $avg=$total_amt/$arr1.size
         end
       elsif(@num==2)
         @arr2=[]   
