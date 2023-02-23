@@ -2,8 +2,8 @@ require 'date'
 
 $total_order
 $total_amt
-$maximum=0
-$minimum=0
+$maximum
+$minimum
 $avg
 $amt
 $arr1=[]
