@@ -100,7 +100,7 @@ class Shop
               end    
             end            
           end  
-      else(@num=='q')
+      else
         puts "Program Terminated"
         break
       end
