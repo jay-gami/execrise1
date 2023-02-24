@@ -60,13 +60,15 @@ class Shop
               $maximum=@arr2.map{|v| v[:value]}.max   
               $avg= $total_amt/@arr2.size
             else
-              $total_order=@arr2.size
-              $total_amt=@arr2.map{|v|v[:value]}.sum
               if(@arr2.size==0)
+                $total_order=@arr2.size
+                $total_amt=@arr2.size
                 $minimum=@arr2.size
                 $maximum=@arr2.size
                 $avg=@arr2.size
               else
+                $total_order=@arr2.size
+                $total_amt=@arr2.map{|v|v[:value]}.sum
                 $minimum=@arr2.map{|v| v[:value]}.min
                 $maximum=@arr2.map{|v| v[:value]}.max   
                 $avg= $total_amt/@arr2.size
@@ -87,13 +89,15 @@ class Shop
               $maximum=@arr3.map{|v| v[:value]}.max   
               $avg= $total_amt/@arr3.size
             else
-              $total_order=@arr3.size
-              $total_amt=@arr3.map{|v|v[:value]}.sum
               if(@arr3.size==0)
+                $total_order=@arr3.size
+                $total_amt=@arr3.size
                 $minimum=@arr3.size
                 $maximum=@arr3.size
                 $avg=@arr3.size
               else
+                $total_order=@arr3.size
+                $total_amt=@arr3.map{|v|v[:value]}.sum
                 $minimum=@arr3.map{|v| v[:value]}.min
                 $maximum=@arr3.map{|v| v[:value]}.max   
                 $avg= $total_amt/@arr3.size
