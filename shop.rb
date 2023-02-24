@@ -1,10 +1,10 @@
 require 'date'
 
-$total_order
-$total_amt
-$maximum
-$minimum
-$avg
+$total_order=0
+$total_amt=0
+$maximum=0
+$minimum=0
+$avg=0
 $amt
 $arr1=[]
 
@@ -17,6 +17,7 @@ class Shop
 
   def process  
     loop  do 
+
       puts "==============="
       puts "Today's Details"
       puts "#{@date}"
@@ -39,20 +40,20 @@ class Shop
         @date=Date.parse(@input[0]).strftime("%d-%m-%Y")
         $amt=@input[1].to_i 
         if($amt>0)
-        $arr1.push(Hash["date":@date,"value":$amt])
-        $total_order=$arr1.size
-        $total_amt=$arr1.map{|v|v[:value]}.sum
-        $minimum=$arr1.map{|v| v[:value]}.min
-        $maximum=$arr1.map{|v| v[:value]}.max
-        $avg=$total_amt/$arr1.size
+          $arr1.push(Hash["date":@date,"value":$amt])
+          $total_order=$arr1.size
+          $total_amt=$arr1.map{|v|v[:value]}.sum
+          $minimum=$arr1.map{|v| v[:value]}.min
+          $maximum=$arr1.map{|v| v[:value]}.max
+          $avg=$total_amt/$arr1.size
         end
       elsif(@num==2)
         @arr2=[]   
         puts "Print Day Details"
         @input=gets.chomp
-        @date=Date.parse(@input).strftime("%d-%m-%Y")
+        @date=@input
           for j in $arr1  
-            if (@input==j.values[0])
+            if (@input==Date.parse(j.values[0]).strftime("%d-%m-%Y"))
               @arr2.push(Hash["date":j.values[0],"value":j.values[1]])
               $total_order=@arr2.size       
               $total_amt=@arr2.map{|v|v[:value]}.sum
@@ -74,6 +75,7 @@ class Shop
                 $avg= $total_amt/@arr2.size
               end
             end
+
           end    
       elsif(@num==3)
         @arr3=[]
