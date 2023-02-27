@@ -27,8 +27,6 @@ class Shop
         puts "2 Print Day Details"
         puts "3 Print Month Details"
         puts "How may I help you?(1,2,3 or quit)"
-
-
       @num=gets.chomp.to_i
         if(@num==1)
          puts "Create New Order (YYYY MM DD Amount):"
@@ -47,14 +45,11 @@ class Shop
            @order[@year][@month][@date] = []
           end
           @order[@year][@month][@date] << @amount 
-
-          @count=@order[@year][@month].values.flatten.size
-          @total=@order[@year][@month].values.flatten.sum
-          @minimum=@order[@year][@month].values.flatten.min
-          @maximum=@order[@year][@month].values.flatten.max
-          @avg=@total/@count
-
-
+          @count=@order[@year][@month][@date].flatten.length
+           @total=@order[@year][@month][@date].flatten.sum
+           @minimum=@order[@year][@month][@date].flatten.min
+           @maximum=@order[@year][@month][@date].flatten.max
+           @avg=@total/@count
            puts "==============="
            puts "#{@year} #{@month} #{@date}"
            puts "----------------"
@@ -84,6 +79,7 @@ class Shop
            @avg=@total/@count
         #    puts "#{@order}"
           end
+           puts "==============="
            puts "#{@year} #{@month} #{@date}"
            puts "----------------"
            puts "Total Order :#{@count}"
@@ -93,7 +89,6 @@ class Shop
            puts "Average Order:#{@avg}"
           
         elsif(@num==3)
-         @order_count=0
          @input = gets.chomp.split(" ").map(&:to_i)
          @year = @input[0]
          @month = @input[1]
@@ -111,6 +106,8 @@ class Shop
             @avg=@total/@count
             # puts "#{@order}"
           end
+           puts "==============="
+
             puts "#{@year} #{@month}"
             puts "----------------"
             puts "Total Order :#{@count}"
