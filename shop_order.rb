@@ -44,12 +44,16 @@ class Shop
           if @order[@year][@month][@date].nil?
            @order[@year][@month][@date] = []
           end
+          if(@amount!=0)
+
           @order[@year][@month][@date] << @amount 
+
           @count=@order[@year][@month][@date].flatten.length
            @total=@order[@year][@month][@date].flatten.sum
            @minimum=@order[@year][@month][@date].flatten.min
            @maximum=@order[@year][@month][@date].flatten.max
            @avg=@total/@count
+
            puts "==============="
            puts "#{@year} #{@month} #{@date}"
            puts "----------------"
@@ -58,7 +62,7 @@ class Shop
            puts "Minimum Order:#{@minimum}"
            puts "Maximum Order:#{@maximum}"
            puts "Average Order:#{@avg}"
-        
+        end
         elsif(@num==2)
          puts "Print Day Details"
          @input = gets.chomp.split(" ").map(&:to_i)
